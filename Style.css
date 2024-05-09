@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our website by GROUP 8</h1>
+    </header>
 
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>HEALTH</h2>
+<p>The most common health issues are physical inactivity and food, obesity, 
+        tobacco, substance abuse, AIDS, mental health, falling and injury, environmental quality, immunization, 
+        and healthcare access. These all-personal health issues require attention to improve the quality of life 
+        and keep you free from diseases.
+
+<p>HEALTH PROBLEMS:
+<p>Physical Activity and Nutrition
+<p>Overweight and Obesity,
+<p>Substance Abuse
+
+<p> 
+     </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</htm>
+<?php
+if(isset($_POST["submit"])) {
+    $target_dir = "uploads/"; // Directory where the file will be saved
+    $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]); // Full path of the file
+
+    // Check if image file is a actual image or fake image
+    $check = getimagesize($_FILES["fileUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        move_uploaded_fil+e($_FILES["fileUpload"]["tmp_name"], $target_file);
+    } else {
+        echo "File is not an image.";https://www
